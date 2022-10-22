@@ -42,7 +42,9 @@ const Home: NextPage = () => {
               </ul>
             </div>
             <span className="image">
-              <Image src={ja} alt="" style={{ maxWidth: '100%',maxHeight: '100%' }} sizes='100%' placeholder='blur'/>
+              <span>
+                <Image src={ja} alt="" placeholder='blur'/>
+              </span>
             </span>
           </div>
         </section>

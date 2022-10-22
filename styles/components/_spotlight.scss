@@ -31,14 +31,18 @@
 			padding: 0.65em;
 			border-radius: 100%;
 			border: solid 1px;
-			width: 16em;
-			height: 16em;
-			overflow-y: hidden;
 
-			img {
+			span {
 				display: block;
 				border-radius: 100%;
+				overflow: hidden;
 				width: 16em;
+
+				img {
+					max-width: 100%;
+				    height: auto;
+					border-radius: 50%;
+				}
 			}
 		}
 
@@ -73,7 +77,7 @@
 			.image {
 				padding: 0.35em;
 
-				img {
+				span {
 					width: 12em;
 				}
 			}
