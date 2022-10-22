@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/future/image'
 import Banner from '../components/Banner'
 import { Layout } from '../components/Layout'
 import ja from '../public/images/ja.jpg'
@@ -43,7 +42,7 @@ const Home: NextPage = () => {
               </ul>
             </div>
             <span className="image">
-              <Image src={ja} alt="" layout={'fill'} objectFit={'cover'} />
+              <Image src={ja} alt="" style={{ maxWidth: '100%',maxHeight: '100%' }} sizes='100%' placeholder='blur'/>
             </span>
           </div>
         </section>
