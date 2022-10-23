@@ -14,8 +14,8 @@ export default function Contact() {
                     <dd><a href="mailto:biuro@pz-solutions.pl">biuro@pz-solutions.pl</a></dd>
                 </dl>
                 <ul className="icons">
-                    <li><a href="https://twitter.com/wooboox" className="icon fa-twitter alt"><span className="label">Twitter</span></a></li>
-                    <li><a href="https://github.com/pz-solutions" className="icon fa-github alt"><span className="label">GitHub</span></a></li>
+                    <li><a href="https://twitter.com/wooboox" className="icon fa-twitter alt" aria-label="twitter"><span className="label">Twitter</span></a></li>
+                    <li><a href="https://github.com/pz-solutions" className="icon fa-github alt" aria-label="github"><span className="label">GitHub</span></a></li>
                 </ul>
             </section>
         </footer>
