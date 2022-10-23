@@ -7,7 +7,7 @@ export default function Contact() {
                 <h2>Dane kontaktowe</h2>
                 <dl className="alt">
                     <dt>Adres</dt>
-                    <dd>ul. Obrzeżna 1D/177 &bull; 02-691, Warszawa &bull; Polska</dd>
+                    <dd>ul. Górczewska 224 m. 417 &bull; 01-460, Warszawa &bull; Polska</dd>
                     <dt>NIP</dt>
                     <dd>797-174-35-23</dd>
                     <dt>Email</dt>
