@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/skel";
+
 ///
 /// Stellar by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,37 +10,37 @@
 /* Statistics */
 
 	.statistics {
-		@include vendor('display', 'flex');
+		@include skel.vendor('display', 'flex');
 		width: 100%;
-		margin: 0 0 (_size(element-margin) * 1.5) 0;
+		margin: 0 0 (functions.size(element-margin) * 1.5) 0;
 		padding: 0;
 		list-style: none;
 		cursor: default;
 
 		li {
-			@include vendor('flex', '1');
+			@include skel.vendor('flex', '1');
 			padding: 1.5em;
-			color: _palette(fg-bold);
+			color: functions.palette(fg-bold);
 			text-align: center;
 
 			&.style1 {
-				background-color: _palette(accent1);
+				background-color: functions.palette(accent1);
 			}
 
 			&.style2 {
-				background-color: _palette(accent2);
+				background-color: functions.palette(accent2);
 			}
 
 			&.style3 {
-				background-color: _palette(accent3);
+				background-color: functions.palette(accent3);
 			}
 
 			&.style4 {
-				background-color: _palette(accent4);
+				background-color: functions.palette(accent4);
 			}
 
 			&.style5 {
-				background-color: _palette(accent5);
+				background-color: functions.palette(accent5);
 			}
 
 			strong, b {
@@ -45,18 +48,18 @@
 				font-size: 2em;
 				line-height: 1.1;
 				color: inherit !important;
-				font-weight: _font(weight);
-				letter-spacing: _font(letter-spacing);
+				font-weight: functions.font(weight);
+				letter-spacing: functions.font(letter-spacing);
 			}
 
 			&:first-child {
-				border-top-left-radius: _size(border-radius);
-				border-bottom-left-radius: _size(border-radius);
+				border-top-left-radius: functions.size(border-radius);
+				border-bottom-left-radius: functions.size(border-radius);
 			}
 
 			&:last-child {
-				border-top-right-radius: _size(border-radius);
-				border-bottom-right-radius: _size(border-radius);
+				border-top-right-radius: functions.size(border-radius);
+				border-bottom-right-radius: functions.size(border-radius);
 			}
 
 			.icon {
@@ -69,7 +72,7 @@
 			}
 		}
 
-		@include breakpoint(medium) {
+		@include skel.breakpoint(medium) {
 			li {
 				strong, b {
 					font-size: 1.5em;
@@ -77,21 +80,21 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		@include skel.breakpoint(small) {
 			display: block;
 			width: 20em;
 			max-width: 100%;
-			margin: 0 auto _size(element-margin) auto;
+			margin: 0 auto functions.size(element-margin) auto;
 
 			li {
 				&:first-child {
 					border-bottom-left-radius: 0;
-					border-top-right-radius: _size(border-radius);
+					border-top-right-radius: functions.size(border-radius);
 				}
 
 				&:last-child {
 					border-top-right-radius: 0;
-					border-bottom-left-radius: _size(border-radius);
+					border-bottom-left-radius: functions.size(border-radius);
 				}
 
 				.icon {

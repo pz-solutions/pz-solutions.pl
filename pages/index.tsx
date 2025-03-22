@@ -6,14 +6,12 @@ import { Layout } from '../components/Layout'
 import ja from '../public/images/ja.jpg'
 
 import IndexSection from '../components/IndexSection'
-import { useRef, useState } from 'react'
 import Nav from '../components/Nav'
-import { useIntersectionObserver } from 'usehooks-ts'
+import { useIntersectionObserver } from '@uidotdev/usehooks'
 import Contact from '../components/Contact'
 
 const Home: NextPage = () => {
-  const ref = useRef<HTMLDivElement | null>(null)
-  const entry = useIntersectionObserver(ref, {})
+  const [ref, entry] = useIntersectionObserver({})
 
   return (
     <Layout>

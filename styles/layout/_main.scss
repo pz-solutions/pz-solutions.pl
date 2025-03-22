@@ -1,3 +1,8 @@
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/skel";
+@use "../base/color";
+
 ///
 /// Stellar by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,12 +12,12 @@
 /* Main */
 
 	#main {
-		@include color(invert);
-		border-radius: _size(border-radius-main);
+		@include color.color(invert);
+		border-radius: functions.size(border-radius-main);
 
 		> .main {
-			@include padding(5em, 5em);
-			border-top: solid 1px _palette(invert, border);
+			@include mixins.padding(5em, 5em);
+			border-top: solid 1px functions.palette(invert, border);
 
 			&:first-child {
 				border-top: 0;
@@ -21,23 +26,23 @@
 			> .image.main:first-child {
 				margin: -5em 0 5em -5em;
 				width: calc(100% + 10em);
-				border-top-right-radius: _size(border-radius-main);
-				border-top-left-radius: _size(border-radius-main);
+				border-top-right-radius: functions.size(border-radius-main);
+				border-top-left-radius: functions.size(border-radius-main);
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
 
 				img {
-					border-top-right-radius: _size(border-radius-main);
-					border-top-left-radius: _size(border-radius-main);
+					border-top-right-radius: functions.size(border-radius-main);
+					border-top-left-radius: functions.size(border-radius-main);
 					border-bottom-right-radius: 0;
 					border-bottom-left-radius: 0;
 				}
 			}
 		}
 
-		@include breakpoint(large) {
+		@include skel.breakpoint(large) {
 			> .main {
-				@include padding(8em, 4em);
+				@include mixins.padding(8em, 4em);
 
 				> .image.main:first-child {
 					margin: -4em 0 4em -4em;
@@ -46,9 +51,9 @@
 			}
 		}
 
-		@include breakpoint(medium) {
+		@include skel.breakpoint(medium) {
 			> .main {
-				@include padding(6em, 3em);
+				@include mixins.padding(6em, 3em);
 
 				> .image.main:first-child {
 					margin: -4em 0 4em -3em;
@@ -57,9 +62,9 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		@include skel.breakpoint(small) {
 			> .main {
-				@include padding(3em, 2em);
+				@include mixins.padding(3em, 2em);
 
 				> .image.main:first-child {
 					margin: -3em 0 2em -2em;
@@ -68,9 +73,9 @@
 			}
 		}
 
-		@include breakpoint(xsmall) {
+		@include skel.breakpoint(xsmall) {
 			> .main {
-				@include padding(3em, 1.5em);
+				@include mixins.padding(3em, 1.5em);
 
 				> .image.main:first-child {
 					margin: -3em 0 1.5em -1.5em;
@@ -79,11 +84,11 @@
 			}
 		}
 
-		@include breakpoint(xxsmall) {
+		@include skel.breakpoint(xxsmall) {
 			border-radius: 0;
 
 			> .main {
-				@include padding(2.5em, 1em);
+				@include mixins.padding(2.5em, 1em);
 
 				> .image.main:first-child {
 					margin: -2.5em 0 1.5em -1em;

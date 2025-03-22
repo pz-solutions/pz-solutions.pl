@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/skel";
+
 ///
 /// Stellar by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,7 +11,7 @@
 
 	ol {
 		list-style: decimal;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 		padding-left: 1.25em;
 
 		li {
@@ -18,7 +21,7 @@
 
 	ul {
 		list-style: disc;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 		padding-left: 1em;
 
 		li {
@@ -62,7 +65,7 @@
 
 			li {
 				display: inline-block;
-				padding: 0 (_size(element-margin) * 0.5) 0 0;
+				padding: 0 (functions.size(element-margin) * 0.5) 0 0;
 				vertical-align: middle;
 
 				&:last-child {
@@ -72,14 +75,14 @@
 
 			&.small {
 				li {
-					padding: 0 (_size(element-margin) * 0.25) 0 0;
+					padding: 0 (functions.size(element-margin) * 0.25) 0 0;
 				}
 			}
 
 			&.vertical {
 				li {
 					display: block;
-					padding: (_size(element-margin) * 0.5) 0 0 0;
+					padding: (functions.size(element-margin) * 0.5) 0 0 0;
 
 					&:first-child {
 						padding-top: 0;
@@ -92,7 +95,7 @@
 
 				&.small {
 					li {
-						padding: (_size(element-margin) * 0.25) 0 0 0;
+						padding: (functions.size(element-margin) * 0.25) 0 0 0;
 
 						&:first-child {
 							padding-top: 0;
@@ -103,14 +106,14 @@
 
 			&.fit {
 				display: table;
-				margin-left: (_size(element-margin) * -0.5);
+				margin-left: (functions.size(element-margin) * -0.5);
 				padding: 0;
 				table-layout: fixed;
-				width: calc(100% + #{(_size(element-margin) * 0.5)});
+				width: calc(100% + #{(functions.size(element-margin) * 0.5)});
 
 				li {
 					display: table-cell;
-					padding: 0 0 0 (_size(element-margin) * 0.5);
+					padding: 0 0 0 (functions.size(element-margin) * 0.5);
 
 					> * {
 						margin-bottom: 0;
@@ -118,20 +121,20 @@
 				}
 
 				&.small {
-					margin-left: (_size(element-margin) * -0.25);
-					width: calc(100% + #{(_size(element-margin) * 0.25)});
+					margin-left: (functions.size(element-margin) * -0.25);
+					width: calc(100% + #{(functions.size(element-margin) * 0.25)});
 
 					li {
-						padding: 0 0 0 (_size(element-margin) * 0.25);
+						padding: 0 0 0 (functions.size(element-margin) * 0.25);
 					}
 				}
 			}
 
-			@include breakpoint(xsmall) {
-				margin: 0 0 _size(element-margin) 0;
+			@include skel.breakpoint(xsmall) {
+				margin: 0 0 functions.size(element-margin) 0;
 
 				li {
-					padding: (_size(element-margin) * 0.5) 0 0 0;
+					padding: (functions.size(element-margin) * 0.5) 0 0 0;
 					display: block;
 					text-align: center;
 					width: 100%;
@@ -148,7 +151,7 @@
 
 				&.small {
 					li {
-						padding: (_size(element-margin) * 0.25) 0 0 0;
+						padding: (functions.size(element-margin) * 0.25) 0 0 0;
 
 						&:first-child {
 							padding-top: 0;
@@ -160,16 +163,16 @@
 	}
 
 	dl {
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 
 		dt {
 			display: block;
-			font-weight: _font(weight-bold);
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			font-weight: functions.font(weight-bold);
+			margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 		}
 
 		dd {
-			margin-left: _size(element-margin);
+			margin-left: functions.size(element-margin);
 		}
 
 		&.alt {
@@ -197,14 +200,14 @@
 		ul {
 			&.alt {
 				li {
-					border-top-color: _palette($p, border);
+					border-top-color: functions.palette($p, border);
 				}
 			}
 		}
 
 		dl {
 			dt {
-				color: _palette($p, fg-bold);
+				color: functions.palette($p, fg-bold);
 			}
 		}
 	}

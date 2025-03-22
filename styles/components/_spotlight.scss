@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/skel";
+
 ///
 /// Stellar by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,12 +10,12 @@
 /* Spotlight */
 
 	.spotlight {
-		@include vendor('display', 'flex');
-		@include vendor('align-items', 'center');
-		margin: 0 0 _size(element-margin) 0;
+		@include skel.vendor('display', 'flex');
+		@include skel.vendor('align-items', 'center');
+		margin: 0 0 functions.size(element-margin) 0;
 
 		.content {
-			@include vendor('flex', '1');
+			@include skel.vendor('flex', '1');
 
 			> :last-child {
 				margin-bottom: 0;
@@ -20,7 +23,7 @@
 
 			header {
 				&.major {
-					margin: 0 0 _size(element-margin) 0;
+					margin: 0 0 functions.size(element-margin) 0;
 				}
 			}
 		}
@@ -46,12 +49,12 @@
 			}
 		}
 
-		@include breakpoint(medium) {
-			@include vendor('flex-direction', 'column-reverse');
+		@include skel.breakpoint(medium) {
+			@include skel.vendor('flex-direction', 'column-reverse');
 			text-align: center;
 
 			.content {
-				@include vendor('flex', '0 1 auto');
+				@include skel.vendor('flex', '0 1 auto');
 				width: 100%;
 
 				header {
@@ -67,13 +70,13 @@
 			}
 
 			.image {
-				@include vendor('flex', '0 1 auto');
+				@include skel.vendor('flex', '0 1 auto');
 				margin-left: 0;
-				margin-bottom: _size(element-margin);
+				margin-bottom: functions.size(element-margin);
 			}
 		}
 
-		@include breakpoint(small) {
+		@include skel.breakpoint(small) {
 			.image {
 				padding: 0.35em;
 
@@ -87,7 +90,7 @@
 	@mixin color-spotlight($p: null) {
 		.spotlight {
 			.image {
-				border-color: _palette($p, border);
+				border-color: functions.palette($p, border);
 			}
 		}
 	}
