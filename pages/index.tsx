@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Banner from '../components/Banner'
 import { Layout } from '../components/Layout'
 import ja from '../public/images/ja.jpg'
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
       <Banner />
       
-      <Nav sticky={!entry?.isIntersecting??false} />
+      <Nav sticky={!entry?.isIntersecting} />
       <div ref={ref}/>
       <div id="main">
         <section id="founder" className="main">
