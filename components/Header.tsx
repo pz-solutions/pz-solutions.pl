@@ -4,10 +4,10 @@ import logo from '../public/images/logo.png';
 
 export default function Header() {
     return (
-        <header id="header" className="alt">
+        <header id="header" className="alt" style={{ position: "relative" }}>
             <div className="inner">
                 <Link href="/" className="logo">
-                    <a><Image src={logo} alt="PZ" layout='intrinsic' /></a>
+                    <a><Image src={logo} alt="PZ" layout="intrinsic" /></a>
                 </Link>
             </div>
         </header>

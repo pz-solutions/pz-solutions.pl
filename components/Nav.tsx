@@ -1,20 +1,25 @@
-import * as React from 'react';
+import React from 'react';
 
-export interface INavProps {
-    sticky: boolean;
+export interface NavItem {
+  title: string;
+  href: string;
 }
 
-export default function Nav(props: INavProps) {
-    return (
-        <nav id="nav" className={props.sticky ? 'alt' : ''}>
-            <ul>
-                <li>
-                    <a href="#founder">Założyciel</a>
-                </li>
-                <li>
-                    <a href="#services">Usługi</a>
-                </li>
-            </ul>
-        </nav>
-    );
+interface NavProps {
+  navigationItems: NavItem[];
+  sticky?: boolean;
 }
+
+export const Nav: React.FC<NavProps> = ({ navigationItems, sticky }) => {
+  return (
+    <nav id="nav" className={sticky ? "alt" : ""}>
+      <ul>
+        {navigationItems.map((item, index) => (
+          <li key={index}>
+            <a href={item.href}>{item.title}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
