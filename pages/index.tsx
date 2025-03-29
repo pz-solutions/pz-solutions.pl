@@ -6,7 +6,7 @@ import { Layout } from '../components/Layout'
 import ja from '../public/images/ja.jpg'
 
 import IndexSection from '../components/IndexSection'
-import Nav from '../components/Nav'
+import { Nav } from '../components/Nav'
 import { useIntersectionObserver } from '@uidotdev/usehooks'
 import Contact from '../components/Contact'
 
@@ -20,10 +20,14 @@ const Home: NextPage = () => {
         <meta name="description" content="Strona Główna" />
       </Head>
 
-      <Banner />
-      
-      <Nav sticky={!entry?.isIntersecting} />
-      <div ref={ref}/>
+      <Banner description="Zarządzanie projektami IT &middot; Tworzenie oprogramowania na zamówienie &middot; Doradztwo&nbsp;IT" />
+
+      <Nav sticky={!entry?.isIntersecting} navigationItems={[
+        { title: 'Założyciel', href: '#founder' },
+        { title: 'Usługi', href: '#services' },
+      ]} />
+
+      <div ref={ref} />
       <div id="main">
         <section id="founder" className="main">
           <div className="spotlight">
@@ -41,7 +45,7 @@ const Home: NextPage = () => {
             </div>
             <span className="image">
               <span>
-                <Image src={ja} alt="" placeholder='blur'/>
+                <Image src={ja} alt="" placeholder='blur' />
               </span>
             </span>
           </div>
@@ -85,7 +89,7 @@ const Home: NextPage = () => {
           </ul>
         </IndexSection>
       </div>
-      <Contact />
+      <Contact lang="pl" />
     </Layout>
   )
 }
