@@ -8,7 +8,7 @@ import { PostHogProvider } from 'posthog-js/react'
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
-      api_host: "/ingest",
+      api_host: "https://eu.i.posthog.com",
       ui_host: "https://eu.posthog.com",
       loaded: (posthogInstance) => {
         if (process.env.NODE_ENV === "development") posthogInstance.debug()
